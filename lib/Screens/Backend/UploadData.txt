@@ -1,0 +1,115 @@
+
+
+
+
+
+
+// class UploadData extends StatefulWidget {
+//   const UploadData({Key? key}) : super(key: key);
+
+//   @override
+//   State<UploadData> createState() => _UploadDataState();
+// }
+
+// class _UploadDataState extends State<UploadData> {
+//   XFile _imageFile;
+//   final picker = ImagePicker();
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: bgcolor2,
+//       appBar: AppBar(
+//         backgroundColor: bgcolor3,
+//         title: Text(
+//           "Upload Data",
+//           style: TextStyle(color: fgcolor),
+//         ),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.start,
+//           children: [
+//             Padding(padding: EdgeInsets.only(top: 15)),
+//             Container(
+//               child: _imageFile == null
+//                   ? TextButton(
+//                       onPressed: () {
+//                         _showDialog();
+//                       },
+//                       child: Icon(
+//                         Icons.add_a_photo,
+//                         size: 50,
+//                         color: fgcolor,
+//                       ),
+//                     )
+//                   : Image.file(
+//                       _imageFile!,
+//                       width: 400,
+//                       height: 400,
+//                     ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+
+//   Future<void> _showDialog() {
+//     return showDialog(
+//         context: context,
+//         builder: (BuildContext) {
+//           return AlertDialog(
+//             title: Text("You want to take a photo from ?"),
+//             content: SingleChildScrollView(
+//               child: ListBody(children: [
+//                 GestureDetector(
+//                   child: Text("Gallary"),
+//                   onTap: () {
+//                     // openGallary();
+//                     getImage();
+//                   },
+//                 ),
+//                 Padding(padding: EdgeInsets.only(top: 8)),
+//                 GestureDetector(
+//                   child: Text("Camera"),
+//                   onTap: () {
+//                     openCamera();
+//                   },
+//                 )
+//               ]),
+//             ),
+//           );
+//         });
+//   }
+
+//   //Future<void> openGallary() async {
+
+//   Future getImage() async {
+//     final pickedFile = await picker.pickImage(source: ImageSource.camera);
+
+//     setState(() {
+//       if (pickedFile != null) {
+//         _imageFile = pickedFile;
+//       } else {
+//         print('No image selected.');
+//       }
+//     });
+
+//     // File picture =
+//     //     await ImagePicker().pickImage(source: ImageSource.gallery) as File;
+
+//     // setState(() {
+//     //   _imageFile = picture;
+//     // });
+//   }
+
+//   Future<void> openCamera() async {
+//     // File picture =
+//     //     await ImagePicker().pickImage(source: ImageSource.camera) as File;
+
+//     // setState(() {
+//     //   _imageFile = picture;
+//     // });
+//   }
+// }
